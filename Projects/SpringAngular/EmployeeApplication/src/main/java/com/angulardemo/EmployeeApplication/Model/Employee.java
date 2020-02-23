@@ -18,19 +18,40 @@ public class Employee {
 	private String lastName;
 	private String emailId;
 	private String gender;
-	private Date dob;
+	private Date doj;
 	private String  department;
+	private boolean active;
 	
 	
+	public Employee(String firstName, String lastName, String emailId,
+			String gender, Date dob, String department, boolean active) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
+		this.gender = gender;
+		this.doj = dob;
+		this.department = department;
+		this.active = active;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", emailId=" + emailId
+				+ ", gender=" + gender + ", dob=" + doj + ", department="
+				+ department + ", active=" + active + "]";
+	}
+
+
+
 	public Employee() {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailId = emailId;
-	}
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -74,13 +95,13 @@ public class Employee {
 		this.gender = gender;
 	}
 
-	@Column(name = "date_of_birth", nullable = false)
-	public Date getDob() {
-		return dob;
+	@Column(name = "date_of_join", nullable = false)
+	public Date getDoj() {
+		return doj;
 	}
 
-	public void setDob(Date dob) {
-		this.dob = dob;
+	public void setDoj(Date doj) {
+		this.doj = doj;
 	}
 
 	@Column(name = "department", nullable = false)
@@ -93,12 +114,14 @@ public class Employee {
 	}
 
 
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", emailId=" + emailId
-				+ ", gender=" + gender + ", dob=" + dob + ", department="
-				+ department + "]";
+	public boolean isActive() {
+		return active;
+	}
+
+
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 		

@@ -1,9 +1,9 @@
 package com.angulardemo.EmployeeApplication.controller;
 
 import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -101,7 +101,7 @@ public class EmployeeController {
 		employee.setLastName(employeeDetails.getLastName());
 		employee.setFirstName(employeeDetails.getFirstName());
 		employee.setDepartment(employeeDetails.getDepartment());
-		employee.setDob(employeeDetails.getDob());
+		employee.setDoj(employeeDetails.getDoj());
 		employee.setGender(employeeDetails.getGender());
 		
 		
