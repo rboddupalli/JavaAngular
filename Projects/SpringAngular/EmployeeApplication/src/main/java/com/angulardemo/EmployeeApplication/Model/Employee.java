@@ -18,7 +18,7 @@ public class Employee {
 	private String lastName;
 	private String emailId;
 	private String gender;
-	private Date dob;
+	private Date doj;
 	private String  department;
 	
 	
@@ -26,10 +26,16 @@ public class Employee {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId) {
+	public Employee(String firstName, String lastName, String emailId,
+			String gender, Date doj, String department, boolean active) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
+		this.gender = gender;
+		this.doj = doj;
+		this.department = department;
+		this.active = active;
 	}
 	
 	@Id
@@ -74,13 +80,13 @@ public class Employee {
 		this.gender = gender;
 	}
 
-	@Column(name = "date_of_birth", nullable = false)
-	public Date getDob() {
-		return dob;
+	@Column(name = "date_of_join", nullable = false)
+	public Date getDoj() {
+		return doj;
 	}
 
-	public void setDob(Date dob) {
-		this.dob = dob;
+	public void setDoj(Date doj) {
+		this.dob = doj;
 	}
 
 	@Column(name = "department", nullable = false)
@@ -90,6 +96,7 @@ public class Employee {
 
 	public void setDepartment(String department) {
 		this.department = department;
+
 	}
 
 
@@ -97,7 +104,7 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName
 				+ ", lastName=" + lastName + ", emailId=" + emailId
-				+ ", gender=" + gender + ", dob=" + dob + ", department="
+				+ ", gender=" + gender + ", doj=" + doj + ", department="
 				+ department + "]";
 	}
 
