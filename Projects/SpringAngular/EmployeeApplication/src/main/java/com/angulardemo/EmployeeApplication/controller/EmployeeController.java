@@ -101,7 +101,7 @@ public class EmployeeController {
 		employee.setLastName(employeeDetails.getLastName());
 		employee.setFirstName(employeeDetails.getFirstName());
 		employee.setDepartment(employeeDetails.getDepartment());
-		employee.setDob(employeeDetails.getDob());
+		employee.setDoj(employeeDetails.getDoj());
 		employee.setGender(employeeDetails.getGender());
 		
 		
