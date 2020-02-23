@@ -34,7 +34,7 @@ public class Employee {
 		this.lastName = lastName;
 		this.emailId = emailId;
 		this.gender = gender;
-		this.doj = dob;
+		this.doj = doj;
 		this.department = department;
 		this.active = active;
 	}
@@ -120,14 +120,6 @@ public class Employee {
 
 
 	public void setActive(boolean active) {
-		this.active = active;
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", emailId=" + emailId
-				+ ", gender=" + gender + ", doj=" + doj + ", department="
-				+ department + "]";
+		this.active = active;		
 	}
-
-		
 }
