@@ -23,13 +23,23 @@ public class Employee {
 	private boolean active;
 	
 	
+<<<<<<< HEAD
 	public Employee(String firstName, String lastName, String emailId,
 			String gender, Date dob, String department, boolean active) {
+=======
+	public Employee() {
+		
+	}
+	
+	public Employee(String firstName, String lastName, String emailId,
+			String gender, Date doj, String department, boolean active) {
+>>>>>>> f5577b17559e1cca5b65a7aa6f4d1c8d0f82ddef
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
 		this.gender = gender;
+<<<<<<< HEAD
 		this.doj = dob;
 		this.department = department;
 		this.active = active;
@@ -49,6 +59,11 @@ public class Employee {
 
 	public Employee() {
 		
+=======
+		this.doj = doj;
+		this.department = department;
+		this.active = active;
+>>>>>>> f5577b17559e1cca5b65a7aa6f4d1c8d0f82ddef
 	}
 	
 	
@@ -101,7 +116,11 @@ public class Employee {
 	}
 
 	public void setDoj(Date doj) {
+<<<<<<< HEAD
 		this.doj = doj;
+=======
+		this.dob = doj;
+>>>>>>> f5577b17559e1cca5b65a7aa6f4d1c8d0f82ddef
 	}
 
 	@Column(name = "department", nullable = false)
@@ -111,9 +130,11 @@ public class Employee {
 
 	public void setDepartment(String department) {
 		this.department = department;
+
 	}
 
 
+<<<<<<< HEAD
 	public boolean isActive() {
 		return active;
 	}
@@ -122,6 +143,14 @@ public class Employee {
 
 	public void setActive(boolean active) {
 		this.active = active;
+=======
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", emailId=" + emailId
+				+ ", gender=" + gender + ", doj=" + doj + ", department="
+				+ department + "]";
+>>>>>>> f5577b17559e1cca5b65a7aa6f4d1c8d0f82ddef
 	}
 
 		
